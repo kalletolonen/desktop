@@ -1,6 +1,9 @@
 micro:
   pkg.installed
 
+/home/kallet/.config/micro/:
+  file.directory
+
 /home/kallet/.config/micro/settings.json:
   file.managed:
     - source: salt://desktop/settings.json
