@@ -25,7 +25,6 @@ apache2:
 
 pwgen:
   pkg.installed
-
   
 ssh:
   pkg.installed
@@ -48,8 +47,3 @@ ufw enable:
   cmd.wait:
     - watch:
       - pkg: ufw
-
-export EDITOR="micro":
-  cmd.wait:
-    - watch:
-      - pkg: micro
