@@ -1,10 +1,10 @@
 micro:
   pkg.installed
 
-/home/kallet/.config/micro/:
+/home/$HOME/.config/micro/:
   file.directory
 
-/home/kallet/.config/micro/settings.json:
+/home/$HOME/.config/micro/settings.json:
   file.managed:
     - source: salt://desktop/settings.json
 
@@ -32,7 +32,7 @@ ssh:
 git:
   pkg.installed
 
-/home/kallet/.gitconfig:
+/home/$HOME/.gitconfig:
   file.managed:
     - source: salt://desktop/.gitconfig
 
