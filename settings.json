@@ -1,6 +1,6 @@
 {
+    "colorscheme": "simple",
+    "ftoptions": false,
     "softwrap": true,
-    "tabstospaces": false,
-    "ftoptions": false
+	"tabstospaces": false
 }
-

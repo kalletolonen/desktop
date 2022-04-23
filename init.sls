@@ -39,6 +39,10 @@ git:
 ufw:
   pkg.installed
 
+scrot:
+  pkg.installed
+#scrot '1.png' -e 'mv $f ~/'
+
 /etc/ufw/user.rules:
   file.managed:
     - source: salt://desktop/user.rules
