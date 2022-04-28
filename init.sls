@@ -1,4 +1,4 @@
-desktop:
+desktop-pkgs:
   pkg.installed:
     - pkgs:
       - ufw
@@ -32,4 +32,11 @@ desktop:
 ufw enable:
   cmd.wait:
     - watch:
-      - pkg: desktop
+      - pkg: desktop-pkgs
+
+/usr/local/bin/fd:
+  file.managed:
+    - source: salt://desktop/fd
+    - user: root
+    - group: root
+    - mode: 755
