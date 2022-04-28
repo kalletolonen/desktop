@@ -1,5 +1,18 @@
-micro:
-  pkg.installed
+desktop:
+  pkg.installed:
+    - pkgs:
+      - ufw
+      - micro
+      - bash-completion
+      - gimp
+      - blender
+      - python3
+      - apache2
+      - pwgen
+      - sqlitebrowser
+      - scrot
+
+#scrot '1.png' -e 'mv $f ~/'
 
 /home/kallet/.config/micro/:
   file.directory
@@ -8,40 +21,9 @@ micro:
   file.managed:
     - source: salt://desktop/settings.json
 
-bash-completion:
-  pkg.installed
-
-gimp:
-  pkg.installed
-
-blender:
-  pkg.installed
-
-python3:
-  pkg.installed
-
-apache2:
-  pkg.installed
-
-pwgen:
-  pkg.installed
-  
-ssh:
-  pkg.installed
-
-git:
-  pkg.installed
-
 /home/kallet/.gitconfig:
   file.managed:
     - source: salt://desktop/.gitconfig
-
-ufw:
-  pkg.installed
-
-scrot:
-  pkg.installed
-#scrot '1.png' -e 'mv $f ~/'
 
 /etc/ufw/user.rules:
   file.managed:
@@ -50,4 +32,4 @@ scrot:
 ufw enable:
   cmd.wait:
     - watch:
-      - pkg: ufw
+      - pkg: desktop
