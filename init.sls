@@ -11,8 +11,10 @@ desktop-pkgs:
       - pwgen
       - sqlitebrowser
       - scrot
+      - pandoc
 
 #scrot '1.png' -e 'mv $f ~/'
+#pandoc -f markdown -t html h1.md -o 1.htm
 
 /home/kallet/.config/micro/:
   file.directory
