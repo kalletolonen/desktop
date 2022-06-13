@@ -12,6 +12,9 @@ desktop-pkgs:
       - sqlitebrowser
       - scrot
       - pandoc
+      - rsync
+      - tree
+      - virtualenv
 
 #scrot '1.png' -e 'mv $f ~/'
 #pandoc -f markdown -t html h1.md -o 1.htm
